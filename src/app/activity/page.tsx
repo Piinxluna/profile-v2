@@ -1,7 +1,7 @@
 export default function Activity() {
   return (
-    <div>
-      <h1>Activity page</h1>
-    </div>
+    <main className='flex min-h-screen flex-col items-center p-24'>
+      <div>Activity page</div>
+    </main>
   )
 }
