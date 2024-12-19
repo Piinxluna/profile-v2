@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='th'>
-      <body className={`antialiased bg-my-indigo-10`}>
+      <body className={`antialiased bg-my-indigo-10 dark:bg-black`}>
         <NavBar />
         <main className='w-full h-full px-10 py-8'>{children}</main>
       </body>

@@ -16,6 +16,7 @@ export default {
         // Custom colors
         'my-pink': {
           20: '#FFD8E0',
+          40: '#EF798A',
           DEFAULT: '#E54F6D',
         },
         'my-coral': {
@@ -25,6 +26,8 @@ export default {
           10: '#F4F9FD',
           20: '#D8DCFF',
           DEFAULT: '#574AE2',
+          80: '#35395A',
+          90: '#171827',
         },
         'my-blue': {
           DEFAULT: '#4361EE',

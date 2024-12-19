@@ -1,9 +1,14 @@
+'use client'
+
 export default function Home() {
+  const isThai = localStorage.getItem('language') === 'TH'
+
   return (
     <div className='w-full h-full'>
-      <div className='min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white'>
-        <h1 className='text-2xl font-bold'>Hello, World!</h1>
-        <p>This text changes color based on the theme.</p>
+      <div>
+        {isThai
+          ? 'เว็บไซต์นี้กำลังอยู่ในช่วงพัฒนา'
+          : 'This website is under construction!'}
       </div>
     </div>
   )
