@@ -1,7 +1,13 @@
 'use client'
 
+import { useEffect, useState } from 'react'
+
 export default function Test() {
-  const isThai = localStorage.getItem('language') === 'TH'
+  const [isThai, setIsThai] = useState(true)
+
+  useEffect(() => {
+    setIsThai(localStorage.getItem('language') === 'TH')
+  }, [])
 
   return (
     <div className='w-full h-full'>
