@@ -14,11 +14,9 @@ export default function PersonalDetail({ isThai }: { isThai: boolean }) {
           quality={100}
         />
       </div>
-      <div className='w-fit flex flex-col items-center space-y-1 sm:space-y-4 text-xl sm:text-2xl font-medium'>
-        <p className='min-w-[70%] dark:drop-shadow-lg'>
-          {isThai ? 'ยินดีต้อนรับเข้าสู่ Profile ของ' : "Hi! I'm"}
-        </p>
-        <div className='w-full max-w-72 sm:max-w-full lg:min-w-[30rem] flex flex-col space-y-3 text-4xl sm:text-6xl font-bold dark:drop-shadow'>
+      <div className='w-fit flex flex-col items-center space-y-1 sm:space-y-4 text-xl sm:text-2xl font-medium dark:drop-shadow-[0_2px_2px_rgba(0,0,0,0.7)]'>
+        <p className='min-w-[70%]'>{isThai ? 'สวัสดีค่ะ! ดิฉัน' : "Hi! I'm"}</p>
+        <div className='w-full max-w-72 sm:max-w-full sm:min-w-[30rem] flex flex-col space-y-3 text-4xl sm:text-6xl font-bold'>
           <h1>{isThai ? 'ชัญญา' : 'Chanya'}</h1>
           <h1 className='text-end'>
             {isThai ? 'สิทธินันทวิทย์' : 'Sittinuntawit'}
