@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
-import { contacts } from '@/feature/home/_contactData'
+import { contacts } from '@/feature/home/personalDetail/_contactData'
 import { ContactIcon } from './ContactIcon'
 
 export async function PersonalDetail() {

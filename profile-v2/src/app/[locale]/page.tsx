@@ -1,5 +1,5 @@
-import { AboutMe } from '@/feature/home/AboutMe'
-import { PersonalDetail } from '@/feature/home/PersonalDetail'
+import { AboutMe } from '@/feature/home/aboutMe/AboutMe'
+import { PersonalDetail } from '@/feature/home/personalDetail/PersonalDetail'
 
 export default function Home() {
   return (

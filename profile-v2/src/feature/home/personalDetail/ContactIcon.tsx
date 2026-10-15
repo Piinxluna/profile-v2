@@ -10,9 +10,9 @@ import {
   type TablerIcon,
 } from '@tabler/icons-react'
 import { cn } from '@/style/utils'
-import type { Contact } from '@/feature/home/_contactData'
-import { ToolTip } from '../../components/basic/ToolTip'
-import { toast } from '../../components/basic/Toast'
+import type { Contact } from '@/feature/home/personalDetail/_contactData'
+import { ToolTip } from '../../../components/basic/ToolTip'
+import { toast } from '../../../components/basic/Toast'
 
 const icons: Record<Contact['type'], TablerIcon> = {
   mail: IconMail,
