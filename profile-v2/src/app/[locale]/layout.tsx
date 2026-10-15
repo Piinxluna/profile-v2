@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { locales } from "@/i18n/config";
 import "../globals.css";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { themeInitScript } from "@/lib/theme";
+import { ThemeToggle } from "@/components/navbar/_ThemeToggle";
 
 // ========================================================================
 // Font Configuration
@@ -24,7 +25,7 @@ const geistMono = Geist_Mono({
 // Metadata Configuration
 // ========================================================================
 export async function generateStaticParams() {
-  return locales.map((lang) => ({ lang }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -59,9 +60,16 @@ export default async function RootLayout({
     <html
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      // data-theme is set by themeInitScript before React hydrates
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider locale={locale} messages={messages}>
+          {/* TODO: move into the navbar once it exists */}
+          <ThemeToggle className="fixed top-4 right-4 z-50" />
           {children}
         </NextIntlClientProvider>
       </body>

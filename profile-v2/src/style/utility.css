@@ -1,0 +1,74 @@
+/* Icons */
+@utility icon-md {
+  stroke-width: 2px;
+  width: 24px;
+  height: 24px;
+}
+@utility icon-lg {
+  stroke-width: 2px;
+  width: 28px;
+  height: 28px;
+}
+@utility icon-xl {
+  stroke-width: 2px;
+  width: 32px;
+  height: 32px;
+}
+@utility icon-sm {
+  stroke-width: 2px;
+  width: 20px;
+  height: 20px;
+}
+@utility icon-xs {
+  stroke-width: 1.5px;
+  width: 16px;
+  height: 16px;
+}
+
+/* Spacing */
+@utility container-auto {
+  @apply container mx-auto px-3 lg:px-6;
+}
+
+/* Scrollbars */
+@utility scrollbar-hide {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Collaps */
+@theme {
+  /* Collaps */
+  --animate-collapsible-down: collapsible-down 0.2s ease-out;
+  --animate-collapsible-up: collapsible-up 0.2s ease-out;
+
+  @keyframes collapsible-down {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      height: var(--radix-collapsible-content-height);
+      opacity: 1;
+    }
+  }
+  @keyframes collapsible-up {
+    from {
+      height: var(--radix-collapsible-content-height);
+      opacity: 1;
+    }
+    to {
+      height: 0;
+      opacity: 0;
+    }
+  }
+}
+
+/* Mascots */
+@utility mascot-outline {
+  [data-theme='dark'] & {
+    filter: drop-shadow(0 0 0.3px var(--color-white))
+      drop-shadow(0 0 0.3px var(--color-white));
+  }
+}
