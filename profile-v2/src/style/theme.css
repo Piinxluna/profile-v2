@@ -9,13 +9,13 @@
     --color-warning: var(--color-orange-600);
 
     /* Text */
-    --color-primary-text: var(--color-neutral-900);
-    --color-secondary-text: var(--color-neutral-600);
-    --color-tertiary-text: var(--color-neutral-400);
+    --color-primary-text: var(--color-slate-900);
+    --color-secondary-text: var(--color-slate-600);
+    --color-tertiary-text: var(--color-slate-400);
     --color-quarterly-text: var(--color-white);
 
     /* Borders */
-    --color-primary-border: var(--color-neutral-200);
+    --color-primary-border: var(--color-slate-200);
 
     /* Chart */
     --color-chart-1: var(--color-pink-200);
@@ -37,9 +37,9 @@
 
     /* Surfaces */
     --color-surface-0: var(--color-white);
-    --color-surface-1: var(--color-neutral-50);
-    --color-surface-2: var(--color-neutral-100);
-    --color-surface-3: var(--color-neutral-200);
+    --color-surface-1: var(--color-slate-50);
+    --color-surface-2: var(--color-slate-100);
+    --color-surface-3: var(--color-slate-200);
     --color-surface-primary: color-mix(
       in srgb,
       var(--color-pink-500),
@@ -78,12 +78,12 @@
 
     /* Text */
     --color-primary-text: var(--color-white);
-    --color-secondary-text: var(--color-neutral-300);
-    --color-tertiary-text: var(--color-neutral-500);
+    --color-secondary-text: var(--color-slate-300);
+    --color-tertiary-text: var(--color-slate-500);
     --color-quarterly-text: var(--color-white);
 
     /* Borders */
-    --color-primary-border: var(--color-neutral-700);
+    --color-primary-border: var(--color-slate-700);
 
     /* Chart */
     --color-chart-1: var(--color-pink-600);
@@ -93,10 +93,10 @@
     --color-chart-5: var(--color-teal-200);
 
     /* Surfaces */
-    --color-surface-0: var(--color-zinc-900);
-    --color-surface-1: var(--color-zinc-950);
-    --color-surface-2: var(--color-zinc-800);
-    --color-surface-3: var(--color-zinc-700);
+    --color-surface-0: var(--color-gray-900);
+    --color-surface-1: var(--color-gray-950);
+    --color-surface-2: var(--color-gray-800);
+    --color-surface-3: var(--color-gray-700);
     --color-surface-primary: color-mix(
       in srgb,
       var(--color-pink-500),

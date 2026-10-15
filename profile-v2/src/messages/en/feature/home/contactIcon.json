@@ -1,0 +1,5 @@
+{
+  "copy": "Copy {value}",
+  "copied": "Copied to clipboard!",
+  "copyFailed": "Couldn't copy, please try again."
+}

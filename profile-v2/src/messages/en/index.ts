@@ -1,10 +1,10 @@
 import componentsMessages from './components'
-import dataMessages from './data'
+import featureMessages from './feature'
 import navigationMessages from './navigation'
 
 const th = {
   components: componentsMessages,
-  data: dataMessages,
+  feature: featureMessages,
   navigation: navigationMessages,
 }
 

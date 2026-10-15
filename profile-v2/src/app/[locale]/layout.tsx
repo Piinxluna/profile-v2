@@ -6,7 +6,8 @@ import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { themeInitScript } from "@/lib/theme";
-import { ThemeToggle } from "@/components/navbar/_ThemeToggle";
+import { NavBar } from "@/components/navigation/navbar/NavBar";
+import { Toaster } from "@/components/basic/Toast";
 
 // ========================================================================
 // Font Configuration
@@ -68,9 +69,9 @@ export default async function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {/* TODO: move into the navbar once it exists */}
-          <ThemeToggle className="fixed top-4 right-4 z-50" />
-          {children}
+          <NavBar />
+          <main className="w-full px-10 py-8">{children}</main>
+          <Toaster />
         </NextIntlClientProvider>
       </body>
     </html>

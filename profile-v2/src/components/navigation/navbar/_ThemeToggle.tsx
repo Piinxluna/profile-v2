@@ -2,7 +2,7 @@
 
 import { useLayoutEffect, useSyncExternalStore } from 'react'
 import { useTranslations } from 'next-intl'
-import { Moon, Sun } from 'lucide-react'
+import { IconMoon, IconSun } from '@tabler/icons-react'
 import { cn } from '@/style/utils'
 import { applyTheme, getPreferredTheme, saveTheme, type Theme } from '@/lib/theme'
 
@@ -12,6 +12,7 @@ function subscribe(onChange: () => void) {
   observer.observe(document.documentElement, { attributeFilter: ['data-theme'] })
   return () => observer.disconnect()
 }
+
 const getSnapshot = () =>
   document.documentElement.getAttribute('data-theme') as Theme | null
 const getServerSnapshot = () => null
@@ -37,8 +38,8 @@ export function ThemeToggle({ className }: { className?: string }) {
       )}
     >
       {/* Theme is unknown on the server; render the icon only after hydration */}
-      {theme === 'dark' && <Sun className="size-5" />}
-      {theme === 'light' && <Moon className="size-5" />}
+      {theme === 'dark' && <IconSun className="size-5" />}
+      {theme === 'light' && <IconMoon className="size-5" />}
     </button>
   )
 }
