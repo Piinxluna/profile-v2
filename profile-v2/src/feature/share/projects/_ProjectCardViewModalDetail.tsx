@@ -36,7 +36,7 @@ export function ProjectCardViewModalDetail({ project }: { project: Project }) {
         <dt className="typo-caption text-tertiary-text self-center">{t('techStack')}</dt>
         <dd className="flex flex-wrap items-center gap-2">
           {project.techStack.map((tech) => (
-            <Chip key={tech} text={tech} color="gray" />
+            <Chip key={tech} text={tech} color="neutral" />
           ))}
         </dd>
       </dl>
