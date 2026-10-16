@@ -74,7 +74,7 @@ export function Toaster() {
             <Icon
               className={cn(
                 'icon-sm shrink-0',
-                item.variant === 'success' ? 'text-primary' : 'text-destructive'
+                item.variant === 'success' ? 'text-success' : 'text-destructive'
               )}
             />
             {item.message}

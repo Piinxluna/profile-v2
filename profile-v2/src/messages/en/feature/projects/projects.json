@@ -1,0 +1,57 @@
+{
+  "title": "Projects",
+  "roles": "Roles",
+  "period": "Period",
+  "techStack": "Tech stack",
+  "view": "View project",
+  "openDetail": "View details of {name}",
+  "viewMore": "View more projects",
+  "moreCount": "{count, plural, one {# more project} other {# more projects}} to explore",
+  "items": {
+    "DIPROM": {
+      "name": "SME Loan Request Management System",
+      "organization": "Department of Industrial Promotion, Ministry of Industry",
+      "period": "April 2025 - Present",
+      "detail": [
+        "Developing the front-end for <b>a centralized SME loan request platform</b>, enabling borrower management, loan processing, accounting, and internal asset management to streamline staff operations."
+      ]
+    },
+    "TalentJourney": {
+      "name": "“Talent Journey” Registration and Point Management System",
+      "organization": "Department of Computer Engineering, Chulalongkorn University",
+      "period": "August 2024 - January 2026",
+      "detail": [
+        "<b>Led the development team, analyzed user requirements, and designed a weekly event registration system</b> featuring real-time seat tracking and auto-filled user profiles to eliminate repetitive data entry.",
+        "The system <b>centralizes all student participation score tracking</b> while enabling students to submit score requests for external activities.",
+        "<b>Serving 1,500+ active students</b> across 100+ hosted activities and significantly streamlining the score verification workflow for staff."
+      ]
+    },
+    "PrineClass": {
+      "name": "“PrineClass” Tutoring Center Management Platform (ERP + LMS Platform)",
+      "organization": "PrineClass",
+      "period": "June 2025 - Present",
+      "detail": [
+        "Analyzed user requirements, defined technical feature specifications, designed the SQL database schema, and developed an <b>all-in-one management system for tutoring centers</b>, integrating core ERP functions (Finance, HR), LMS features (Attendance Tracking, Learning Materials), and marketing features (Website, Blog).",
+        "Implemented an automated payment slip verification module with real-time transaction error detection, <b>reducing review times by over 80%.</b>",
+        "Successfully deployed to active tutoring centers with <b>highly positive client feedback</b>."
+      ]
+    },
+    "SummyShare": {
+      "name": "“SummyShare” Summary Marketplace Platform",
+      "organization": "PrineDev",
+      "period": "August 2025 - Present",
+      "detail": [
+        "Defined system requirement, technical feature specifications and designed SQL database schema and developed <b>web-based marketplace for academic summary sheets</b>.",
+        "Ensured a convenient trading process for both creators and buyers, enabling creators to <b>generate over 10,000 Baht in income</b>."
+      ]
+    },
+    "DIWLAB": {
+      "name": "Lab Registration and Renewal Platform",
+      "organization": "Department of Industrial Works, Ministry of Industry",
+      "period": "June 2024 - January 2025",
+      "detail": [
+        "Developed the front-end for a <b>lab registration and renewal platform</b>, including automated request validation to streamline both lab and internal staff workflows."
+      ]
+    }
+  }
+}

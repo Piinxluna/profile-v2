@@ -1,0 +1,33 @@
+{
+  "title": "Experience",
+  "techStack": "Tech stack",
+  "logoAlt": "{company} logo",
+  "items": {
+    "ttb": {
+      "period": "June - December 2026",
+      "role": "Software Engineer Intern",
+      "company": "TMBTHANACHART BANK PUBLIC COMPANY LIMITED",
+      "highlights": [
+        "Collaborated in <b>developing and enhancing an app-based customer privileges platform</b> across front-end and back-end microservices.",
+        "Authored unit and E2E test suites while supporting QA workflows to ensure feature stability.",
+        "Maintained CI/CD pipelines and updated core dependencies to mitigate security risks."
+      ]
+    },
+    "scAsset": {
+      "period": "June - July 2025",
+      "role": "Product Owner Intern",
+      "company": "SC ASSET CORPORATION PUBLIC COMPANY LIMITED",
+      "highlights": [
+        "Gathered user requirements, created wireframes, and <b>defined technical feature specifications and user stories</b> for the \"RueJai\" resident application."
+      ]
+    },
+    "scb": {
+      "period": "June - July 2024",
+      "role": "Software Developer Intern",
+      "company": "THE SIAM COMMERCIAL BANK PUBLIC COMPANY LIMITED",
+      "highlights": [
+        "<b>Developed a Proof of Concept (PoC) for a Salesforce-integrated chatbot system</b>, enabling the sales team to query customer information and streamline daily workflows."
+      ]
+    }
+  }
+}

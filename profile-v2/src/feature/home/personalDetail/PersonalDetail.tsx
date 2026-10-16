@@ -11,7 +11,7 @@ export async function PersonalDetail() {
       {/* Image */}
       <div className="relative top-10 -z-20 h-80 w-64 rotate-3 overflow-hidden rounded-2xl shadow-lg sm:h-128 sm:w-96 lg:-left-8 lg:rotate-[4.5deg]">
         <Image
-          src="/my_picture_1.jpg"
+          src="/my-picture-1.jpg"
           alt='my-picture'
           fill
           sizes="(min-width: 640px) 24rem, 16rem"
