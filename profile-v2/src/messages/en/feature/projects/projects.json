@@ -13,7 +13,7 @@
       "organization": "Department of Industrial Promotion, Ministry of Industry",
       "period": "April 2025 - Present",
       "detail": [
-        "Developing the front-end for <b>a centralized SME loan request platform</b>, enabling borrower management, loan processing, accounting, and internal asset management to streamline staff operations."
+        "Developing the front-end for <b>a centralized SME loan request platform</b> that enables borrower management, loan processing, accounting, and internal asset management to streamline staff operations."
       ]
     },
     "TalentJourney": {
@@ -23,7 +23,7 @@
       "detail": [
         "<b>Led the development team, analyzed user requirements, and designed a weekly event registration system</b> featuring real-time seat tracking and auto-filled user profiles to eliminate repetitive data entry.",
         "The system <b>centralizes all student participation score tracking</b> while enabling students to submit score requests for external activities.",
-        "<b>Serving 1,500+ active students</b> across 100+ hosted activities and significantly streamlining the score verification workflow for staff."
+        "<b>Serves 1,500+ active students</b> across 100+ hosted activities, significantly streamlining the score verification workflow for staff."
       ]
     },
     "PrineClass": {
@@ -31,9 +31,9 @@
       "organization": "PrineClass",
       "period": "June 2025 - Present",
       "detail": [
-        "Analyzed user requirements, defined technical feature specifications, designed the SQL database schema, and developed an <b>all-in-one management system for tutoring centers</b>, integrating core ERP functions (Finance, HR), LMS features (Attendance Tracking, Learning Materials), and marketing features (Website, Blog).",
+        "Analyzed user requirements, defined technical specifications, designed the SQL database schema, and developed an <b>all-in-one management system for tutoring centers</b>, integrating core ERP functions (Finance, HR), LMS features (Attendance Tracking, Learning Materials), and marketing features (Website, Blog).",
         "Implemented an automated payment slip verification module with real-time transaction error detection, <b>reducing review times by over 80%.</b>",
-        "Successfully deployed to active tutoring centers with <b>highly positive client feedback</b>."
+        "Successfully deployed the platform to active tutoring centers, receiving <b>highly positive client feedback</b> for improving operational efficiency."
       ]
     },
     "SummyShare": {
@@ -41,8 +41,8 @@
       "organization": "PrineDev",
       "period": "August 2025 - Present",
       "detail": [
-        "Defined system requirement, technical feature specifications, designed SQL database schema, and developed <b>web-based marketplace for academic summary sheets</b>.",
-        "Ensured a convenient trading process for both creators and buyers, enabling creators to <b>generate over 10,000 Baht in income</b>."
+        "Defined system requirements and technical specifications, designed SQL database schema, and developed a <b>web-based marketplace for academic summary sheets</b>.",
+        "Engineered a seamless trading process for both creators and buyers, enabling creators to <b>generate over 10,000 Baht in income</b>."
       ]
     },
     "DIWLAB": {
@@ -50,7 +50,7 @@
       "organization": "Department of Industrial Works, Ministry of Industry",
       "period": "June 2024 - January 2025",
       "detail": [
-        "Developed the front-end for a <b>lab registration and renewal platform</b>, including automated request validation to streamline both lab and internal staff workflows."
+        "Developed the front-end for a <b>lab registration and renewal platform</b>, featuring automated request validation to streamline workflows for both lab and internal staff."
       ]
     }
   }

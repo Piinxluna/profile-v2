@@ -1,4 +1,5 @@
 import AboutMe from '@/feature/home/aboutMe/AboutMe'
+import Education from '@/feature/home/education/Education'
 import Experience from '@/feature/home/experience/Experience'
 import PersonalDetail from '@/feature/home/personalDetail/PersonalDetail'
 import Projects from '@/feature/home/projects/Projects'
@@ -13,6 +14,7 @@ export default function Page() {
         <Experience />
         <Projects />
         <Skill />
+        <Education />
       </div>
     </div>
   )

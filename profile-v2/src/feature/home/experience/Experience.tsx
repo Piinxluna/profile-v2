@@ -2,10 +2,10 @@ import { getTranslations } from 'next-intl/server'
 import Card from '@/components/basic/Card'
 import Chip from '@/components/basic/Chip'
 import Divider from '@/components/basic/Divider'
+import TimelineLogo from '@/feature/share/timeline/TimelineLogo'
 import { richTags } from '@/lib/richText'
-import { experiences } from './_experienceData'
-import CompanyLogo from './_CompanyLogo'
 import { cn } from '@/style/utils'
+import { experiences } from './_experienceData'
 
 export default async function Experience() {
   const t = await getTranslations('feature.experience')
@@ -26,11 +26,16 @@ export default async function Experience() {
               {index < experiences.length - 1 && (
                 <div
                   aria-hidden
-                  className="absolute top-12 -bottom-6 left-6 w-1 -translate-x-1/2 bg-primary-border sm:top-16 sm:left-8"
+                  className="absolute top-12 -bottom-6 left-6 hidden w-1 -translate-x-1/2 bg-primary-border sm:top-16 sm:left-8 sm:block"
                 />
               )}
 
-              <CompanyLogo experience={experience} alt={t('logoAlt', { company })} />
+              <TimelineLogo
+                logo={experience.logo}
+                logoText={experience.logoText}
+                bgColor={experience.color.bg}
+                alt={t('logoAlt', { company })}
+              />
 
               <Card className={'flex min-w-0 flex-1 flex-col gap-3'}>
                 <div className="flex flex-col gap-1">

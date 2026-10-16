@@ -1,0 +1,19 @@
+{
+  "title": "Education",
+  "logoAlt": "{school} logo",
+  "gpax": "GPAX: {gpax}",
+  "items": {
+    "university": {
+      "period": "2023 - 2026",
+      "degree": "B.Eng. in Computer Engineering & Digital Technology",
+      "school": "Chulalongkorn University",
+      "highlights": []
+    },
+    "highSchool": {
+      "period": "2020 - 2022",
+      "degree": "IT Major",
+      "school": "Srinakharinwirot University Prasarnmit Demonstration School (Secondary)",
+      "highlights": []
+    }
+  }
+}
