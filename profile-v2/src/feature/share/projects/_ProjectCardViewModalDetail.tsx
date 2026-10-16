@@ -1,11 +1,11 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { IconExternalLink } from '@tabler/icons-react'
 import { Chip } from '@/components/basic/Chip'
 import { richTags } from '@/lib/richText'
 import { RoleChip } from '@/feature/share/roles/RoleChip'
 import type { Project } from './_projectData'
+import { Link } from '@/components/basic/Link'
 
 export function ProjectCardViewModalDetail({ project }: { project: Project }) {
   const t = useTranslations('feature.projects')
@@ -47,15 +47,10 @@ export function ProjectCardViewModalDetail({ project }: { project: Project }) {
       </ul>
 
       {project.url && (
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="typo-link flex w-fit items-center gap-1"
-        >
-          {t('view')}
-          <IconExternalLink className="icon-xs" />
-        </a>
+        <Link
+          url={project.url}
+          text={t('view')}
+        />
       )}
     </div>
   )

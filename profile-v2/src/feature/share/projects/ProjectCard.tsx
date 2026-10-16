@@ -1,12 +1,12 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { IconExternalLink } from '@tabler/icons-react'
 import { Card } from '@/components/basic/Card'
 import { Chip } from '@/components/basic/Chip'
 import { RoleChip } from '@/feature/share/roles/RoleChip'
 import type { Project } from './_projectData'
 import { cn } from '@/style/utils'
+import { Link } from '@/components/basic/Link'
 
 interface Props {
   project: Project
@@ -67,15 +67,10 @@ export function ProjectCard({ project, onOpen, className }: Props) {
       </div>
 
       {project.url && (
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="typo-link relative z-10 flex w-fit items-center gap-1"
-        >
-          {t('view')}
-          <IconExternalLink className="icon-xs" />
-        </a>
+        <Link
+          url={project.url}
+          text={t('view')}
+        />
       )}
     </Card>
   )
