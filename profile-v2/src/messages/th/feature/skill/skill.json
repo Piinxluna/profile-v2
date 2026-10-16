@@ -1,0 +1,26 @@
+{
+  "title": "ทักษะ",
+  "verify": "ตรวจสอบ",
+  "languageCert": {
+    "title": "ภาษาและใบรับรอง",
+    "languages": "ภาษา",
+    "certification": "ใบรับรอง"
+  },
+  "languages": {
+    "th": { "name": "ภาษาไทย", "level": "ภาษาแม่" },
+    "en": { "name": "ภาษาอังกฤษ", "level": "IELTS 7.5" },
+    "cn": { "name": "ภาษาจีน", "level": "ระดับเริ่มต้น" }
+  },
+  "certifications": {
+    "isc2Cc": { "name": "Certified in Cybersecurity (CC)", "issuer": "ISC2" }
+  },
+  "technical": {
+    "title": "ทักษะทางเทคนิค",
+    "groups": {
+      "languages": "ภาษาโปรแกรม",
+      "frameworks": "Frameworks",
+      "databasesCloud": "Databases & Cloud / DevOps",
+      "toolsPlatforms": "เครื่องมือและแพลตฟอร์ม"
+    }
+  }
+}

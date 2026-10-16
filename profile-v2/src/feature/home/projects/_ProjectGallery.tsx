@@ -20,7 +20,7 @@ export default function ProjectGallery() {
   return (
     <>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-        {projects.slice(0, PREVIEW_COUNT).map((project, index) => (
+        {projects.filter((project) => project.isHighlighted).slice(0, PREVIEW_COUNT).map((project, index) => (
           <ProjectCard
             key={project.key}
             project={project}

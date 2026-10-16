@@ -47,7 +47,9 @@ function subscribe(listener: () => void) {
   return () => listeners.delete(listener)
 }
 const getSnapshot = () => toasts
-const getServerSnapshot = (): ToastItem[] => []
+// Must return the same array every call: React compares snapshots by identity
+const NO_TOASTS: ToastItem[] = []
+const getServerSnapshot = () => NO_TOASTS
 
 const icons = {
   success: IconCircleCheck,

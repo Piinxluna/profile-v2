@@ -26,7 +26,7 @@ export default function ProjectCard({ project, onOpen, className }: Props) {
       <button
         type="button"
         aria-haspopup="dialog"
-        aria-label={t('openDetail', { projectName })}
+        aria-label={t('openDetail', { name: projectName })}
         onClick={onOpen}
         className="absolute inset-0 rounded-2xl hover:cursor-pointer"
       />
@@ -39,32 +39,34 @@ export default function ProjectCard({ project, onOpen, className }: Props) {
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-1.5">
-        {project.roleTypes.map((roleKey) => (
-          <RoleChip
-            key={roleKey}
-            roleKey={roleKey}
-            size="sm"
-            overrideText={formatOverrideRole(project, roleKey)}
-          />
-        ))}
-      </div>
+      <div className="flex flex-col gap-1 w-full h-full justify-between">
+        <div className="flex flex-wrap gap-1.5">
+          {project.roleTypes.map((roleKey) => (
+            <RoleChip
+              key={roleKey}
+              roleKey={roleKey}
+              size="sm"
+              overrideText={formatOverrideRole(project, roleKey)}
+            />
+          ))}
+        </div>
 
-      {/* One line, scrolls sideways when it overflows. Sits above the cover button (z-10)
+        {/* One line, scrolls sideways when it overflows. Sits above the cover button (z-10)
           so it can receive scroll; clicking it still opens the modal */}
-      <div
-        onClick={onOpen}
-        className="relative z-10 mt-auto scrollbar-hide flex gap-2 overflow-x-auto pt-1 hover:cursor-pointer"
-      >
-        {project.techStack.map((tech) => (
-          <Chip
-            key={tech}
-            text={tech}
-            color="neutral"
-            size="sm"
-            className="shrink-0 whitespace-nowrap"
-          />
-        ))}
+        <div
+          onClick={onOpen}
+          className="relative z-10 h-fit scrollbar-hide flex gap-2 overflow-x-auto pt-1 hover:cursor-pointer"
+        >
+          {project.techStack.map((tech) => (
+            <Chip
+              key={tech}
+              text={tech}
+              color="neutral"
+              size="sm"
+              className="shrink-0 whitespace-nowrap"
+            />
+          ))}
+        </div>
       </div>
 
       {project.url && <Link url={project.url} text={t('view')} className="relative z-10" />}

@@ -14,6 +14,8 @@ export interface Project {
   }[]
 
   // No url: the "View" link is hidden
+  isHighlighted?: boolean
+  isOngoing?: boolean
   url?: string
 }
 
@@ -21,8 +23,25 @@ export const projects: Project[] = [
   {
     key: 'DIPROM',
     roleTypes: ['frontEnd'],
+    isHighlighted: true,
+    isOngoing: true,
     url: 'https://incredit.diprom.go.th/',
     techStack: ['Next.js'],
+  },
+  {
+    key: 'PrineClass',
+    url: 'https://prineclass.com/',
+    roleTypes: ['fullStack', 'systemAnalyst'],
+    isHighlighted: true,
+    isOngoing: true,
+    techStack: ['Next.js', 'Express.js', 'PostgreSQL', 'DigitalOcean Spaces', 'Redis'],
+  },
+  {
+    key: 'SummyShare',
+    url: 'https://summyshare.com/',
+    roleTypes: ['fullStack', 'systemAnalyst'],
+    isOngoing: true,
+    techStack: ['Next.js', 'Express.js', 'PostgreSQL', 'DigitalOcean Spaces', 'Redis'],
   },
   {
     key: 'TalentJourney',
@@ -34,18 +53,7 @@ export const projects: Project[] = [
       },
     ],
     roleTypes: ['projectManager', 'fullStack', 'systemAnalyst'],
-    techStack: ['Next.js', 'Express.js', 'PostgreSQL', 'DigitalOcean Spaces', 'Redis'],
-  },
-  {
-    key: 'PrineClass',
-    url: 'https://prineclass.com/',
-    roleTypes: ['fullStack', 'systemAnalyst'],
-    techStack: ['Next.js', 'Express.js', 'PostgreSQL', 'DigitalOcean Spaces', 'Redis'],
-  },
-  {
-    key: 'SummyShare',
-    url: 'https://summyshare.com/',
-    roleTypes: ['fullStack', 'systemAnalyst'],
+    isHighlighted: true,
     techStack: ['Next.js', 'Express.js', 'PostgreSQL', 'DigitalOcean Spaces', 'Redis'],
   },
   {

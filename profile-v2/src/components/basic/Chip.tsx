@@ -29,9 +29,9 @@ const colors = {
 }
 
 const sizes = {
-  sm: 'px-2.5 py-0.5 text-xs font-medium',
-  md: 'px-3.5 py-1 text-sm font-medium',
-  lg: 'px-5 py-2.5 text-base font-semibold sm:text-lg',
+  sm: 'px-2.5 py-0.5 text-sm font-medium',
+  md: 'px-3.5 py-1 text-base font-medium',
+  lg: 'px-5 py-2.5 text-lg font-semibold sm:text-lg',
 }
 
 interface Props {

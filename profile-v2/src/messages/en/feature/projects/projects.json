@@ -1,5 +1,9 @@
 {
   "title": "Projects",
+  "subtitle": {
+    "ongoing": "Ongoing projects",
+    "completed": "Completed projects"
+  },
   "roles": "Roles",
   "period": "Period",
   "techStack": "Tech stack",

@@ -47,7 +47,8 @@
 @layer base {
   :root {
     /* Font Variables */
-    --font-main: var(--font-inter), var(--font-noto), sans-serif;
+    /* --font-sarabun is set on <html> by next/font in the root layout */
+    --font-main: var(--font-sarabun), sans-serif;
     --font-mono: var(--font-pt-mono), monospace;
   }
 
