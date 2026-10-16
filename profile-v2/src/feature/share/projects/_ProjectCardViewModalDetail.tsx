@@ -24,7 +24,6 @@ export function ProjectCardViewModalDetail({ project }: { project: Project }) {
                 key={roleKey}
                 roleKey={roleKey}
                 overrideText={project.overrideRoles?.find((r) => r.role === roleKey)?.text || ''}
-                size="sm"
               />
             ))}
           </div>
