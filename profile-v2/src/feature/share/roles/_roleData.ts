@@ -21,5 +21,5 @@ export const roles: Role[] = [
   { key: 'backEnd', color: 'emerald', isHide: true },
   { key: 'systemAnalyst', color: 'sky' },
   { key: 'projectManager', color: 'fuchsia' },
-  { key: 'coordinator', color: 'pink' },
+  { key: 'coordinator', color: 'pink', isHide: true },
 ]

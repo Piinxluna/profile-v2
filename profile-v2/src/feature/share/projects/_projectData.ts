@@ -33,8 +33,14 @@ export const projects: Project[] = [
         text: 'Lead Full-stack Developer',
       },
     ],
-    roleTypes: ['fullStack', 'systemAnalyst', 'projectManager', 'coordinator'],
-    techStack: ['Next.js', 'Express.js', 'PostgreSQL', 'Redis'],
+    roleTypes: ['projectManager', 'fullStack', 'systemAnalyst'],
+    techStack: [
+      'Next.js',
+      'Express.js',
+      'PostgreSQL',
+      'DigitalOcean Spaces',
+      'Redis',
+    ],
   },
   {
     key: 'PrineClass',

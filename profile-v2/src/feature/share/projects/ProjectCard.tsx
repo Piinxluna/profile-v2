@@ -16,7 +16,7 @@ interface Props {
 
 export function ProjectCard({ project, onOpen, className }: Props) {
   const t = useTranslations('feature.projects')
-  const name = t(`items.${project.key}.name`)
+  const projectName = t(`items.${project.key}.name`)
 
   return (
     <Card interactive className={cn("relative flex h-full flex-col gap-3", className)}>
@@ -25,14 +25,14 @@ export function ProjectCard({ project, onOpen, className }: Props) {
       <button
         type="button"
         aria-haspopup="dialog"
-        aria-label={t('openDetail', { name })}
+        aria-label={t('openDetail', { projectName })}
         onClick={onOpen}
         className="absolute inset-0 rounded-2xl hover:cursor-pointer"
       />
 
       <div className="flex flex-col gap-1">
         <p className="typo-caption text-tertiary-text">{t(`items.${project.key}.period`)}</p>
-        <h3>{name}</h3>
+        <h3>{projectName}</h3>
         <p className="typo-caption text-secondary-text font-semibold">
           {t(`items.${project.key}.organization`)}
         </p>
@@ -40,7 +40,12 @@ export function ProjectCard({ project, onOpen, className }: Props) {
 
       <div className="flex flex-wrap gap-1.5">
         {project.roleTypes.map((roleKey) => (
-          <RoleChip key={roleKey} roleKey={roleKey} size="sm" />
+          <RoleChip
+            key={roleKey}
+            roleKey={roleKey}
+            size="sm"
+            overrideText={project.overrideRoles?.find((r) => r.role === roleKey)?.text || ''}
+          />
         ))}
       </div>
 

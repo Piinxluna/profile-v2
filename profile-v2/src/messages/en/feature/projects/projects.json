@@ -9,7 +9,7 @@
   "moreCount": "{count, plural, one {# more project} other {# more projects}} to explore",
   "items": {
     "DIPROM": {
-      "name": "SME Loan Request Management System",
+      "name": "“DIPROM” SME Loan Request Management System",
       "organization": "Department of Industrial Promotion, Ministry of Industry",
       "period": "April 2025 - Present",
       "detail": [
@@ -46,7 +46,7 @@
       ]
     },
     "DIWLAB": {
-      "name": "Lab Registration and Renewal Platform",
+      "name": "“DIW LAB” Lab Registration and Renewal Platform",
       "organization": "Department of Industrial Works, Ministry of Industry",
       "period": "June 2024 - January 2025",
       "detail": [

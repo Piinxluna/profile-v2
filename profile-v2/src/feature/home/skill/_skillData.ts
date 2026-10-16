@@ -60,7 +60,7 @@ export const technicalSkills: TechnicalSkillGroup[] = [
     items: ['TypeScript', 'JavaScript', 'Python', 'C++', 'Java', 'SQL'],
     icon: IconCode,
     color: {
-      text: 'text-purple-700 dark:text-purple-300',
+      text: 'text-purple-600 dark:text-purple-300',
     },
   },
   {

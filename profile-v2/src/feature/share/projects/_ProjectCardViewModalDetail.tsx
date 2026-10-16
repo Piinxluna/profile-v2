@@ -16,24 +16,22 @@ export function ProjectCardViewModalDetail({ project }: { project: Project }) {
       <p className="text-secondary-text font-semibold">{t(`items.${project.key}.organization`)}</p>
 
       <dl className="grid grid-cols-1 gap-3 sm:grid-cols-[auto_1fr] sm:gap-x-6">
-        <dt className="typo-caption text-tertiary-text">{t('roles')}</dt>
-        <dd className="flex flex-col gap-2">
-          <div className="flex flex-wrap gap-1.5">
-            {project.roleTypes.map((roleKey) => (
-              <RoleChip
-                key={roleKey}
-                roleKey={roleKey}
-                overrideText={project.overrideRoles?.find((r) => r.role === roleKey)?.text || ''}
-              />
-            ))}
-          </div>
-        </dd>
-
-        <dt className="typo-caption text-tertiary-text">{t('period')}</dt>
+        <dt className="typo-caption text-tertiary-text self-center">{t('period')}</dt>
         <dd>{t(`items.${project.key}.period`)}</dd>
 
+        <dt className="typo-caption text-tertiary-text self-center">{t('roles')}</dt>
+        <dd className="flex flex-wrap items-center gap-1.5">
+          {project.roleTypes.map((roleKey) => (
+            <RoleChip
+              key={roleKey}
+              roleKey={roleKey}
+              overrideText={project.overrideRoles?.find((r) => r.role === roleKey)?.text || ''}
+            />
+          ))}
+        </dd>
+
         <dt className="typo-caption text-tertiary-text self-center">{t('techStack')}</dt>
-        <dd className="flex flex-wrap items-center gap-2">
+        <dd className="flex flex-wrap items-center gap-1.5">
           {project.techStack.map((tech) => (
             <Chip key={tech} text={tech} color="neutral" />
           ))}
