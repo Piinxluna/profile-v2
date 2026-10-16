@@ -8,16 +8,18 @@ import { IconExternalLink } from '@tabler/icons-react'
 export function Link({
   url,
   text,
+  openNewTab = true,
   className
 }: {
   url: string
   text: string
+  openNewTab?: boolean
   className?: string
 }) {
   return (
     <a
       href={url}
-      target="_blank"
+      target={openNewTab ? "_blank" : "_self"}
       rel="noopener noreferrer"
       className={cn("typo-link flex w-fit items-center gap-1", className)}
     >

@@ -28,9 +28,9 @@ export function ProjectGallery() {
         <Link href="/projects" className="group rounded-2xl">
           <Card
             interactive
-            className="bg-surface-0 border-primary/40 relative flex h-full flex-col items-center justify-center gap-4 overflow-hidden border-dashed text-center lg:flex-row lg:justify-between lg:text-start"
+            className="bg-surface-0 border-primary/40 flex h-full flex-col items-center justify-center gap-4 overflow-hidden border-dashed text-center lg:flex-row lg:justify-between lg:text-start"
           >
-            <div className="relative flex flex-col gap-1">
+            <div className="flex flex-col gap-1">
               <h3 className="text-primary">{t('viewMore')}</h3>
               {moreCount > 0 && (
                 <p className="typo-caption text-secondary-text">
@@ -39,7 +39,7 @@ export function ProjectGallery() {
               )}
             </div>
 
-            <span className="bg-primary group-hover:bg-primary-hover text-quarterly-text relative flex size-12 shrink-0 items-center justify-center rounded-full shadow-sm transition-all group-hover:translate-x-1">
+            <span className="bg-primary group-hover:bg-primary-hover text-quarterly-text flex size-12 shrink-0 items-center justify-center rounded-full shadow-sm transition-all group-hover:translate-x-1">
               <IconArrowRight className="icon-md" />
             </span>
           </Card>

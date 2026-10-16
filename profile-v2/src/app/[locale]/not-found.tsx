@@ -13,6 +13,7 @@ export default async function NotFound() {
       <Link
         url="/"
         text={t('goHome')}
+        openNewTab={false}
         className='text-base'
       />
     </section>
