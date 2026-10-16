@@ -7,9 +7,7 @@ export default getRequestConfig(async ({ locale: requested }) => {
   // An explicit locale (e.g. getTranslations({ locale: 'en' })) wins,
   // otherwise use the [locale] segment of the current route
   const candidate = requested ?? (await rootLocale())
-  const locale = hasLocale(routing.locales, candidate)
-    ? candidate
-    : routing.defaultLocale
+  const locale = hasLocale(routing.locales, candidate) ? candidate : routing.defaultLocale
 
   return {
     locale,

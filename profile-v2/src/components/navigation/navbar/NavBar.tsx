@@ -2,15 +2,15 @@
 
 import { useTranslations } from 'next-intl'
 import { usePathname } from '@/i18n/navigation'
-import { NavBarItem } from './_NavBarItem'
-import { Setting } from './_Setting'
+import NavBarItem from './_NavBarItem'
+import Setting from './_Setting'
 
 const pages = [
   { url: '/', key: 'home' },
   { url: '/projects', key: 'projects' },
 ] as const
 
-export function NavBar() {
+export default function NavBar() {
   const t = useTranslations('components.navBar')
   // Pathname without the locale, e.g. /th/projects/abc -> /projects/abc
   const pathname = usePathname()
@@ -18,10 +18,8 @@ export function NavBar() {
 
   return (
     // Floating bar: centered by container-auto, stays at the top while scrolling
-    <header className="container-auto sticky top-4 z-40 mt-4">
-      <nav
-        className="bg-surface-0/80 rounded-2xl border border-primary-border shadow-xs backdrop-blur"
-      >
+    <header className="sticky top-4 z-40 container-auto mt-4">
+      <nav className="rounded-2xl border border-primary-border bg-surface-0/80 shadow-xs backdrop-blur">
         {/* Main part: pages are always visible */}
         <div className="flex h-14 items-center justify-between gap-4 px-4 sm:px-6">
           <div className="flex items-center gap-4 lg:gap-6">
@@ -37,7 +35,6 @@ export function NavBar() {
 
           <Setting />
         </div>
-
       </nav>
     </header>
   )

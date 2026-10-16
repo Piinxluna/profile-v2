@@ -1,17 +1,14 @@
 import { Link } from '@/i18n/navigation'
 import { cn } from '@/style/utils'
 
-export function NavBarItem({
-  url,
-  label,
-  isActive,
-  onClick,
-}: {
+interface Props {
   url: string
   label: string
   isActive: boolean
   onClick?: () => void
-}) {
+}
+
+export default function NavBarItem({ url, label, isActive, onClick }: Props) {
   return (
     <Link
       href={url}
@@ -20,8 +17,8 @@ export function NavBarItem({
       className={cn(
         'transition-colors',
         isActive
-          ? 'text-primary font-bold'
-          : 'text-secondary-text hover:text-primary-text font-medium'
+          ? 'font-bold text-primary'
+          : 'font-medium text-secondary-text hover:text-primary-text'
       )}
     >
       {label}

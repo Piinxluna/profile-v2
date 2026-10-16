@@ -11,8 +11,8 @@ import {
 } from '@tabler/icons-react'
 import { cn } from '@/style/utils'
 import type { Contact } from '@/feature/home/personalDetail/_contactData'
-import { ToolTip } from '../../../components/basic/ToolTip'
-import { toast } from '../../../components/basic/Toast'
+import ToolTip from '@/components/basic/ToolTip'
+import { toast } from '@/components/basic/Toast'
 
 const icons: Record<Contact['type'], TablerIcon> = {
   mail: IconMail,
@@ -28,22 +28,19 @@ const sizes = {
   lg: { box: 'size-20', icon: 44 },
 }
 
-export function ContactIcon({
-  contact,
-  isRounded,
-  size = 'md',
-  className,
-}: {
+interface Props {
   contact: Contact
   isRounded?: boolean
   size?: keyof typeof sizes
   className?: string
-}) {
+}
+
+export default function ContactIcon({ contact, isRounded, size = 'md', className }: Props) {
   const t = useTranslations('feature.contactIcon')
 
   const Icon = icons[contact.type]
   const classes = cn(
-    'bg-primary hover:bg-primary-hover text-quarterly-text flex items-center justify-center transition-colors hover:cursor-pointer',
+    'flex items-center justify-center bg-primary text-quarterly-text transition-colors hover:cursor-pointer hover:bg-primary-hover',
     sizes[size].box,
     isRounded ? 'rounded-full' : 'rounded-lg',
     className

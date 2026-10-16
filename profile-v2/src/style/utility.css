@@ -69,7 +69,6 @@
 /* Mascots */
 @utility mascot-outline {
   [data-theme='dark'] & {
-    filter: drop-shadow(0 0 0.3px var(--color-white))
-      drop-shadow(0 0 0.3px var(--color-white));
+    filter: drop-shadow(0 0 0.3px var(--color-white)) drop-shadow(0 0 0.3px var(--color-white));
   }
 }

@@ -1,8 +1,13 @@
 import Image from 'next/image'
 import { cn } from '@/style/utils'
-import { type Experience as ExperienceItem } from './_experienceData'
+import type { Experience as ExperienceItem } from './_experienceData'
 
-export default async function CompanyLogo({ experience, alt }: { experience: ExperienceItem; alt: string }) {
+interface Props {
+  experience: ExperienceItem
+  alt: string
+}
+
+export default function CompanyLogo({ experience, alt }: Props) {
   const box =
     'relative z-10 flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-xl shadow-sm sm:size-16 sm:rounded-2xl'
 
@@ -18,7 +23,11 @@ export default async function CompanyLogo({ experience, alt }: { experience: Exp
   return (
     <div
       aria-hidden
-      className={cn(box, experience.color.bg || 'bg-slate-900', 'text-md font-bold text-white sm:text-base')}
+      className={cn(
+        box,
+        experience.color.bg || 'bg-slate-900',
+        'text-md font-bold text-white sm:text-base'
+      )}
     >
       {experience.logoText}
     </div>

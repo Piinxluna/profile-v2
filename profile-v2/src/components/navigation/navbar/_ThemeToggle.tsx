@@ -13,11 +13,14 @@ function subscribe(onChange: () => void) {
   return () => observer.disconnect()
 }
 
-const getSnapshot = () =>
-  document.documentElement.getAttribute('data-theme') as Theme | null
+const getSnapshot = () => document.documentElement.getAttribute('data-theme') as Theme | null
 const getServerSnapshot = () => null
 
-export function ThemeToggle({ className }: { className?: string }) {
+interface Props {
+  className?: string
+}
+
+export default function ThemeToggle({ className }: Props) {
   const t = useTranslations('components.themeToggle')
   const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
 
@@ -33,7 +36,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       aria-label={t(next === 'dark' ? 'toDark' : 'toLight')}
       title={t(next === 'dark' ? 'toDark' : 'toLight')}
       className={cn(
-        'text-secondary-text hover:bg-surface-2 hover:text-primary-text inline-flex size-9 items-center justify-center rounded-full transition-colors',
+        'inline-flex size-9 items-center justify-center rounded-full text-secondary-text transition-colors hover:bg-surface-2 hover:text-primary-text',
         className
       )}
     >

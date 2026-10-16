@@ -11,18 +11,16 @@ export type LocaleNames = Record<
 export const locales = ['th', 'en'] as const
 export const defaultLocale: Locale = 'th'
 
-export const localeNames: Record<
-  Locale,
-  { name: string; nativeName: string; shortName: string }
-> = {
-  th: {
-    name: 'Thai',
-    nativeName: 'ไทย',
-    shortName: 'TH',
-  },
-  en: {
-    name: 'English',
-    nativeName: 'English',
-    shortName: 'EN',
-  },
-}
+export const localeNames: Record<Locale, { name: string; nativeName: string; shortName: string }> =
+  {
+    th: {
+      name: 'Thai',
+      nativeName: 'ไทย',
+      shortName: 'TH',
+    },
+    en: {
+      name: 'English',
+      nativeName: 'English',
+      shortName: 'EN',
+    },
+  }

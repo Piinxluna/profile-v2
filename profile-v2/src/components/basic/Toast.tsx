@@ -6,7 +6,7 @@ import { cn } from '@/style/utils'
 
 /**
  * Simple toast notifications.
- * - Render <Toaster /> once (in the root layout)
+ * - Render <Toast /> once (in the root layout)
  * - Call toast('Saved') from any Client Component or event handler
  */
 type ToastVariant = 'success' | 'error'
@@ -54,7 +54,7 @@ const icons = {
   error: IconAlertCircle,
 }
 
-export function Toaster() {
+export default function Toast() {
   const items = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
 
   return (
@@ -69,7 +69,7 @@ export function Toaster() {
         return (
           <div
             key={item.id}
-            className="bg-primary-text text-surface-0 animate-in fade-in slide-in-from-right-4 flex max-w-sm items-center gap-2.5 rounded-lg px-4 py-3 text-base font-medium shadow-lg"
+            className="flex max-w-sm items-center gap-2.5 rounded-lg bg-primary-text px-4 py-3 text-base font-medium text-surface-0 shadow-lg animate-in fade-in slide-in-from-right-4"
           >
             <Icon
               className={cn(

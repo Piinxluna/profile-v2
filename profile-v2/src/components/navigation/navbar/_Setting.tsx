@@ -3,15 +3,15 @@
 import { useLocale } from 'next-intl'
 import { usePathname, useRouter } from '@/i18n/navigation'
 import { localeNames, locales, type Locale } from '@/i18n/config'
-import { TogglePill } from '../../basic/TogglePill'
-import { ThemeToggle } from './_ThemeToggle'
+import TogglePill from '@/components/basic/TogglePill'
+import ThemeToggle from './_ThemeToggle'
 
 const localeItems = locales.map((locale) => ({
   value: locale,
   label: localeNames[locale].shortName,
 }))
 
-export function Setting() {
+export default function Setting() {
   const locale = useLocale() as Locale
   const pathname = usePathname()
   const router = useRouter()

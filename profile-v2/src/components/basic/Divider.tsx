@@ -2,21 +2,19 @@ import { cn } from '@/style/utils'
 
 type DividerAlign = 'start' | 'center' | 'end'
 
+interface Props {
+  text?: string
+  align?: DividerAlign
+  className?: string
+}
+
 /**
  * Bold horizontal line, optionally with a heading on it.
  * - text: heading shown on the line; omit for a plain line
  * - align: where the text sits on the line (default: center)
  * NOTE: Takes the full width of its parent; inside a `flex items-center` parent, give the parent `w-full`
  */
-export function Divider({
-  text,
-  align = 'center',
-  className,
-}: {
-  text?: string
-  align?: DividerAlign
-  className?: string
-}) {
+export default function Divider({ text, align = 'center', className }: Props) {
   const lineClass = 'bg-primary-border h-2 rounded-full'
 
   if (!text) {

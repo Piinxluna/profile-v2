@@ -73,14 +73,7 @@ export const technicalSkills: TechnicalSkillGroup[] = [
   },
   {
     key: 'databasesCloud',
-    items: [
-      'PostgreSQL',
-      'MongoDB',
-      'Redis',
-      'Docker',
-      'CI/CD',
-      'DigitalOcean Spaces',
-    ],
+    items: ['PostgreSQL', 'MongoDB', 'Redis', 'Docker', 'CI/CD', 'DigitalOcean Spaces'],
     icon: IconDatabaseCog,
     color: {
       text: 'text-green-600 dark:text-green-300',

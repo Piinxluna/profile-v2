@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { contacts } from '@/feature/home/personalDetail/_contactData'
-import { ContactIcon } from './ContactIcon'
+import ContactIcon from './_ContactIcon'
 
-export async function PersonalDetail() {
+export default async function PersonalDetail() {
   const t = await getTranslations('feature.personalDetail')
 
   return (
@@ -12,7 +12,7 @@ export async function PersonalDetail() {
       <div className="relative top-10 -z-20 h-80 w-64 rotate-3 overflow-hidden rounded-2xl shadow-lg sm:h-128 sm:w-96 lg:-left-8 lg:rotate-[4.5deg]">
         <Image
           src="/my-picture-1.jpg"
-          alt='my-picture'
+          alt="my-picture"
           fill
           sizes="(min-width: 640px) 24rem, 16rem"
           className="object-cover"
@@ -33,7 +33,7 @@ export async function PersonalDetail() {
           <p className="text-center text-xl font-medium sm:text-start sm:text-2xl">{t('role')}</p>
           {/* Decorate circle */}
           <div className="relative">
-            <div className="bg-primary/60 absolute right-5 -bottom-11 -z-10 size-16 rounded-full backdrop-blur sm:-bottom-7 sm:size-18" />
+            <div className="absolute right-5 -bottom-11 -z-10 size-16 rounded-full bg-primary/60 backdrop-blur sm:-bottom-7 sm:size-18" />
           </div>
         </div>
 

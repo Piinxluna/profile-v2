@@ -1,9 +1,9 @@
-import { Projects } from "@/feature/projects/Projects";
+import Projects from '@/feature/projects/Projects'
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="flex h-full w-full flex-col container-auto">
+    <div className="container-auto flex h-full w-full flex-col">
       <Projects />
-    </main>
+    </div>
   )
 }

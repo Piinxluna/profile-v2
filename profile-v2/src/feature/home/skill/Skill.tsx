@@ -1,12 +1,12 @@
 import { getTranslations } from 'next-intl/server'
-import { IconExternalLink } from '@tabler/icons-react'
-import { Card } from '@/components/basic/Card'
-import { Chip } from '@/components/basic/Chip'
-import { Divider } from '@/components/basic/Divider'
+import Card from '@/components/basic/Card'
+import Chip from '@/components/basic/Chip'
+import Divider from '@/components/basic/Divider'
+import Link from '@/components/basic/Link'
 import { certifications, languages, technicalSkills } from './_skillData'
 import { cn } from '@/style/utils'
 
-export async function Skill() {
+export default async function Skill() {
   const t = await getTranslations('feature.skill')
 
   return (
@@ -48,17 +48,7 @@ export async function Skill() {
                     </span>
                   </span>
 
-                  {cert.url && (
-                    <a
-                      href={cert.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary hover:text-primary-hover typo-caption flex items-center gap-1 font-semibold transition-colors"
-                    >
-                      {t('verify')}
-                      <IconExternalLink className="icon-xs" />
-                    </a>
-                  )}
+                  {cert.url && <Link url={cert.url} text={t('verify')} />}
                 </li>
               ))}
             </ul>
@@ -70,7 +60,7 @@ export async function Skill() {
           <h3>{t('technical.title')}</h3>
           {technicalSkills.map(({ icon: Icon, ...group }) => (
             <div key={group.key} className="flex flex-col gap-2">
-              <h4 className={cn("flex items-center gap-2 text-secondary-text", group.color?.text)}>
+              <h4 className={cn('flex items-center gap-2 text-secondary-text', group.color?.text)}>
                 {Icon && <Icon className="icon-sm shrink-0" />}
                 {t(`technical.groups.${group.key}`)}
               </h4>

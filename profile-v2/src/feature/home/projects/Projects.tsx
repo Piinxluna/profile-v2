@@ -1,8 +1,8 @@
 import { getTranslations } from 'next-intl/server'
-import { Divider } from '@/components/basic/Divider'
-import { ProjectGallery } from './_ProjectGallery'
+import Divider from '@/components/basic/Divider'
+import ProjectGallery from './_ProjectGallery'
 
-export async function Projects() {
+export default async function Projects() {
   const t = await getTranslations('feature.projects')
 
   return (

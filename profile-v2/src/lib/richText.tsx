@@ -5,5 +5,5 @@ import type { ReactNode } from 'react'
  * - <b>text</b>: emphasized text
  */
 export const richTags = {
-  b: (chunks: ReactNode) => <strong className="text-primary-text font-semibold">{chunks}</strong>,
+  b: (chunks: ReactNode) => <strong className="font-semibold text-primary-text">{chunks}</strong>,
 }

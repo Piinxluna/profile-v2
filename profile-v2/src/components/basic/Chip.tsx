@@ -1,4 +1,4 @@
-import { Color } from '@/interface'
+import type { Color } from '@/interface'
 import { cn } from '@/style/utils'
 
 // Tailwind palette colors: 100 background + 600 text (light), 500/15 background + 300 text (dark).
@@ -34,21 +34,18 @@ const sizes = {
   lg: 'px-5 py-2.5 text-base font-semibold sm:text-lg',
 }
 
-/**
- * Small rounded label, e.g. a tag or a tech stack item.
- * - color: a theme color (primary/neutral) or a Tailwind palette color, e.g. 'blue'
- */
-export function Chip({
-  text,
-  color = 'primary',
-  size = 'md',
-  className,
-}: {
+interface Props {
   text: string
   color?: Color
   size?: keyof typeof sizes
   className?: string
-}) {
+}
+
+/**
+ * Small rounded label, e.g. a tag or a tech stack item.
+ * - color: a theme color (primary/neutral) or a Tailwind palette color, e.g. 'blue'
+ */
+export default function Chip({ text, color = 'primary', size = 'md', className }: Props) {
   return (
     <span
       className={cn(

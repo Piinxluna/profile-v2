@@ -1,22 +1,24 @@
 import { cn } from '@/style/utils'
 
-export function TogglePill({
-  selectedItem,
-  items,
-  onSelect,
-  size = 'md',
-  className,
-}: {
+interface Props {
   selectedItem: string
   items: { value: string; label: string }[]
   onSelect: (value: string) => void
   size?: 'sm' | 'md'
   className?: string
-}) {
+}
+
+export default function TogglePill({
+  selectedItem,
+  items,
+  onSelect,
+  size = 'md',
+  className,
+}: Props) {
   return (
     <div
       className={cn(
-        'bg-surface-2 flex w-fit items-center gap-1 rounded-2xl p-2 text-sm',
+        'flex w-fit items-center gap-1 rounded-2xl bg-surface-2 p-2 text-sm',
         size === 'sm' && 'gap-0 px-1.5 py-1 text-xs',
         className
       )}

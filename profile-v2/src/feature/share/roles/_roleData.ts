@@ -1,12 +1,7 @@
 import { Color } from '@/interface'
 
 export type RoleKey =
-  | 'fullStack'
-  | 'frontEnd'
-  | 'backEnd'
-  | 'systemAnalyst'
-  | 'projectManager'
-  | 'coordinator'
+  'fullStack' | 'frontEnd' | 'backEnd' | 'systemAnalyst' | 'projectManager' | 'coordinator'
 
 export interface Role {
   // Key into `feature.roles` messages

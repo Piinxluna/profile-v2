@@ -1,12 +1,13 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { Card } from '@/components/basic/Card'
-import { Chip } from '@/components/basic/Chip'
-import { RoleChip } from '@/feature/share/roles/RoleChip'
-import type { Project } from './_projectData'
+import Card from '@/components/basic/Card'
+import Chip from '@/components/basic/Chip'
+import RoleChip from '@/feature/share/roles/RoleChip'
+import Link from '@/components/basic/Link'
 import { cn } from '@/style/utils'
-import { Link } from '@/components/basic/Link'
+import type { Project } from './_projectData'
+import { formatOverrideRole } from './_projectUtils'
 
 interface Props {
   project: Project
@@ -14,12 +15,12 @@ interface Props {
   className?: string
 }
 
-export function ProjectCard({ project, onOpen, className }: Props) {
+export default function ProjectCard({ project, onOpen, className }: Props) {
   const t = useTranslations('feature.projects')
   const projectName = t(`items.${project.key}.name`)
 
   return (
-    <Card interactive className={cn("relative flex h-full flex-col gap-3", className)}>
+    <Card interactive className={cn('relative flex h-full flex-col gap-3', className)}>
       {/* Covers the whole card to open the modal; links below sit above it with z-10
           (a link can't be nested inside a button) */}
       <button
@@ -33,7 +34,7 @@ export function ProjectCard({ project, onOpen, className }: Props) {
       <div className="flex flex-col gap-1">
         <p className="typo-caption text-tertiary-text">{t(`items.${project.key}.period`)}</p>
         <h3>{projectName}</h3>
-        <p className="typo-caption text-secondary-text font-semibold">
+        <p className="typo-caption font-semibold text-secondary-text">
           {t(`items.${project.key}.organization`)}
         </p>
       </div>
@@ -44,7 +45,7 @@ export function ProjectCard({ project, onOpen, className }: Props) {
             key={roleKey}
             roleKey={roleKey}
             size="sm"
-            overrideText={project.overrideRoles?.find((r) => r.role === roleKey)?.text || ''}
+            overrideText={formatOverrideRole(project, roleKey)}
           />
         ))}
       </div>
@@ -53,7 +54,7 @@ export function ProjectCard({ project, onOpen, className }: Props) {
           so it can receive scroll; clicking it still opens the modal */}
       <div
         onClick={onOpen}
-        className="relative z-10 mt-auto flex gap-2 overflow-x-auto pt-1 scrollbar-hide hover:cursor-pointer"
+        className="relative z-10 mt-auto scrollbar-hide flex gap-2 overflow-x-auto pt-1 hover:cursor-pointer"
       >
         {project.techStack.map((tech) => (
           <Chip
@@ -66,12 +67,7 @@ export function ProjectCard({ project, onOpen, className }: Props) {
         ))}
       </div>
 
-      {project.url && (
-        <Link
-          url={project.url}
-          text={t('view')}
-        />
-      )}
+      {project.url && <Link url={project.url} text={t('view')} className="relative z-10" />}
     </Card>
   )
 }
