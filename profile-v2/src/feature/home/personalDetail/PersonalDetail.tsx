@@ -11,17 +11,18 @@ export default async function PersonalDetail() {
       {/* Image */}
       <div className="relative top-10 -z-20 h-80 w-64 rotate-3 overflow-hidden rounded-2xl shadow-lg sm:h-128 sm:w-96 lg:-left-8 lg:rotate-[4.5deg]">
         <Image
-          src="/my-picture-1.jpg"
+          src="/my-picture-2.jpg"
           alt="my-picture"
           fill
           sizes="(min-width: 640px) 24rem, 16rem"
+          quality={100}
           className="object-cover"
           priority
         />
       </div>
 
       {/* Detail */}
-      <div className="flex w-fit flex-col items-center gap-1 sm:gap-4 dark:drop-shadow-[0_2px_2px_rgba(0,0,0,0.7)]">
+      <div className="flex w-fit flex-col items-center gap-1 drop-shadow-[0_2px_3px_rgba(255,255,255,0.7)] sm:gap-4 dark:drop-shadow-[0_2px_2px_rgba(0,0,0,0.7)]">
         <p className="min-w-[70%] text-xl font-medium sm:text-2xl">{t('greeting')}</p>
 
         <div className="flex w-full max-w-72 flex-col gap-3 sm:max-w-full sm:min-w-120">
