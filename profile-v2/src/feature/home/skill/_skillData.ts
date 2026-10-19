@@ -57,7 +57,7 @@ export interface TechnicalSkillGroup {
 export const technicalSkills: TechnicalSkillGroup[] = [
   {
     key: 'languages',
-    items: ['TypeScript', 'JavaScript', 'Python', 'C++', 'Java', 'SQL'],
+    items: ['TypeScript', 'JavaScript', 'Python', 'C++', 'Java', 'Swift', 'Swift UI', 'SQL'],
     icon: IconCode,
     color: {
       text: 'text-purple-600 dark:text-purple-300',
